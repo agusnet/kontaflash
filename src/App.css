@@ -1,0 +1,250 @@
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--md-surface);
+}
+
+/* Sidebar M3 */
+.sidebar {
+  width: 280px;
+  background: #f3f4f9;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 8px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  border-right: 1px solid var(--md-surface-variant);
+}
+
+.sidebar-header {
+  padding: 24px 16px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--md-on-surface);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-small {
+  width: 40px;
+  height: 40px;
+  background: var(--md-primary-container);
+  color: var(--md-on-primary-container);
+  border-radius: var(--radius-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-item {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 24px;
+  border-radius: var(--radius-full);
+  color: var(--md-on-surface-variant);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+}
+
+.nav-item:hover {
+  background: var(--md-surface-variant);
+}
+
+.nav-item.active {
+  background: var(--md-primary-container);
+  color: var(--md-on-primary-container);
+}
+
+/* Dashboard & Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: #fdfbff;
+  border-radius: var(--radius-extra-large);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: var(--elevation-1);
+  border: 1px solid var(--md-surface-variant);
+}
+
+.stat-label {
+  color: var(--md-on-surface-variant);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--md-on-surface);
+}
+
+/* Content Area */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: var(--md-surface);
+  overflow-y: auto;
+}
+
+.view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+/* Modals Fix */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.modal-content {
+  background: var(--md-surface);
+  border-radius: var(--radius-extra-large);
+  padding: 32px;
+  width: 90%;
+  max-width: 560px;
+  box-shadow: var(--elevation-2);
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+/* Material Components Refinement */
+md-outlined-text-field, md-outlined-select {
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+/* Asegurar que el texto del botón se vea bien */
+md-filled-button, md-outlined-button, md-text-button {
+  --md-sys-typescale-label-large-size: 1rem;
+}
+
+/* Finance Classes */
+.text-success { color: var(--md-success) !important; }
+.text-danger { color: var(--md-error) !important; }
+.font-bold { font-weight: 700; }
+.text-right { text-align: right; }
+
+/* Tables */
+.table-container {
+  border: 1px solid var(--md-surface-variant);
+  border-radius: var(--radius-large);
+  overflow: hidden;
+  background: #fff;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th {
+  background: var(--md-surface-variant);
+  padding: 16px;
+  text-align: left;
+  font-size: 0.85rem;
+  color: var(--md-on-surface-variant);
+}
+
+.data-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--md-surface-variant);
+}
+
+/* Lists and Cards */
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.data-card {
+  background: #fff;
+  border: 1px solid var(--md-surface-variant);
+  border-radius: var(--radius-large);
+  padding: 24px;
+  box-shadow: var(--elevation-1);
+}
+
+.card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 4px;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: var(--md-surface-variant);
+  border-radius: var(--radius-full);
+  padding: 0 16px;
+  height: 48px;
+  gap: 12px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 0.95rem;
+}
