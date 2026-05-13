@@ -1,7 +1,7 @@
 # KontaFlash 🚀
 **Gestión Financiera Personal y Empresarial con Material Design 3**
 
-![Portada de KontaFlash](./kontaflash1.jpg)
+![Portada de KontaFlash](./kontaflash1.png)
 
 KontaFlash es una aplicación de escritorio multiplataforma diseñada para ofrecer un control total sobre tus finanzas con una interfaz moderna, limpia y altamente intuitiva basada en **Material Design 3 (Material You)**.
 
