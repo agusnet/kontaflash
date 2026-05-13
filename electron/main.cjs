@@ -158,8 +158,16 @@ ipcMain.handle('db:login', async (event, { username, password }) => {
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 1200,
-    height: 800,
+    width: 1278,
+    height: 688,
+    useContentSize: true,
+    autoHideMenuBar: true,
+    minWidth: 1024,
+    minHeight: 600,
+
+
+
+
     webPreferences: {
       preload: path.join(__dirname, 'preload.cjs'),
       nodeIntegration: false,
@@ -167,6 +175,7 @@ function createWindow() {
     },
     icon: path.join(__dirname, '../public/vite.svg')
   });
+
 
   win.loadURL(
     isDev
